@@ -91,7 +91,7 @@ const Header = () => {
                 <div className='p-5 bg-white border rounded shadow-sm'>
                   <div className='flex items-center justify-between mb-4'>
                     <div>
-                      <a
+                      <Link
                         href='/'
                         aria-label='proReader'
                         title='proReader'
@@ -115,7 +115,7 @@ const Header = () => {
                         <span className='ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase'>
                           proReader
                         </span>
-                      </a>
+                      </Link>
                     </div>
                     <div>
                       <button
@@ -135,36 +135,36 @@ const Header = () => {
                   </div>
                   <nav>
                     <ul className='space-y-4'>
-                      <li>
-                        <a
-                          href='/'
-                          aria-label='Home'
-                          title='Home'
-                          className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
-                        >
-                          Home
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href='/books'
-                          aria-label='Books'
-                          title='Books'
-                          className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
-                        >
-                          Books
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href='/about'
-                          aria-label='About Us'
-                          title='About Us'
-                          className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
-                        >
-                          About Us
-                        </a>
-                      </li>
+                    <li>
+                      <NavLink
+                        to='/home'
+                        aria-label='Home'
+                        title='Home'
+                        className={({isActive}) => isActive ? 'font-medium tracking-wide text-blue-700 transition-colors duration-200 hover:text-deep-purple-accent-400' : 'font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-100'}
+                      >
+                        Home
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to='/books'
+                        aria-label='Books'
+                        title='Books'
+                        className={({isActive}) => isActive ? 'font-medium tracking-wide text-blue-700 transition-colors duration-200 hover:text-deep-purple-accent-400' : 'font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-100'}
+                      >
+                        Books
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to='/about'
+                        aria-label='About us'
+                        title='About us'
+                        className={({isActive}) => isActive ? 'font-medium tracking-wide text-blue-700 transition-colors duration-200 hover:text-deep-purple-accent-400' : 'font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-100'}
+                      >
+                        About us
+                      </NavLink>
+                    </li>
                     </ul>
                   </nav>
                 </div>
